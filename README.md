@@ -4,6 +4,14 @@
 
 This code example demonstrates the encoding and decoding of Manchester protocol using Smart I/O and its verification.
 
+## Requirements
+
+- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.2 or later (tested with v3.2)
+
+## Supported toolchains (make variable 'TOOLCHAIN')
+
+- GNU Arm&reg; Embedded Compiler v11.3.1 (`GCC_ARM`) – Default value of `TOOLCHAIN`
+
 ## Device
 
 The device used in this code example (CE) is:
@@ -12,7 +20,7 @@ The device used in this code example (CE) is:
 ## Board
 
 The board used for testing is:
-- TRAVEO™ T2G evaluation kit ([KIT_T2G-B-E_LITE](https://www.infineon.com/cms/en/product/evaluation-boards/kit_t2g-b-e_lite/))
+- TRAVEO&trade; T2G Body Entry Lite evaluation kit ([KIT_T2G-B-E_LITE](https://www.infineon.com/evaluation-board/KIT-T2G-B-E-LITE))
 
 ## Scope of work
 
@@ -64,7 +72,7 @@ The Smart I/O in TRAVEO™ T2G has the following features:
 
 For this CE, two Smart I/O ports are used for encoding and decoding.
 
-More details can be found in the <a href="https://www.infineon.com/dgdl/Infineon-Traveo_II_Automotive_Body_Controller_Entry_Family_Architecture-UserManual-v10_00-EN.zip?fileId=5546d462766cbe860176804ea8d27e9b">Technical Reference Manual (TRM)</a>.
+More details of TRAVEO™ T2G CYT2BL Series can be found in Technical Reference Manual (TRM), Registers TRM and Data Sheet. (See the [here](https://www.infineon.com/products/microcontroller/32-bit-traveo-t2g-arm-cortex/for-body#documents) for Architecture TRM and Registers TRM, See the [here](https://www.infineon.com/products/microcontroller/32-bit-traveo-t2g-arm-cortex/for-body/t2g-cyt2bl#documents) for Datasheet)
 
 **Manchester protocol**
 
@@ -141,7 +149,7 @@ Each of the mid-bit edges will trigger a PWM signal, resulting in a clock signal
 ## Hardware setup
 
 This CE has been developed for:
-- TRAVEO™ T2G Body Entry Lite evaluation kit ([KIT_T2G-B-E_LITE](https://www.infineon.com/cms/en/product/evaluation-boards/kit_t2g-b-e_lite/))<BR>
+- TRAVEO™ T2G Body Entry Lite evaluation kit ([KIT_T2G-B-E_LITE](https://www.infineon.com/evaluation-board/KIT-T2G-B-E-LITE))<BR>
 <img src="./images/KIT_T2G-B-E_LITE.gif"/><BR>
 No changes are required from the board's default settings.
 
@@ -266,7 +274,7 @@ After code compilation, perform the following steps for flashing the device:
     - Select the code example project in the Project Explorer.
     - In the **Quick Panel**, scroll down, and click **[Project Name] Program (KitProg3_MiniProg4)**.
 4. After programming, the code example starts automatically. Confirm that the initial messages are displayed on the UART terminal.
-5. You can debug the example to step through the code. In the IDE, use the **[Project Name] Debug (KitProg3_MiniProg4)** configuration in the **Quick Panel**. For details, see the "Program and debug" section in the [Eclipse IDE for ModusToolbox™ software user guide](https://www.infineon.com/dgdl/Infineon-ModusToolbox_3.2_b_Eclipse_IDE_User_Guide-UserManual-v01_00-EN.pdf?fileId=8ac78c8c8d2fe47b018e0ea1b42078f2).
+5. You can debug the example to step through the code. In the IDE, use the **[Project Name] Debug (KitProg3_MiniProg4)** configuration in the **Quick Panel**. For details, see the "Program and debug" section in the [Eclipse IDE for ModusToolbox™ software user guide](https://www.infineon.com/MTBEclipseIDEUserguide).
 
 **Note :** **(Only while debugging)** On the CM4 CPU, some code in *main()* may execute before the debugger halts at the beginning of *main()*. This means that some code executes twice: once before the debugger stops execution, and again after the debugger resets the program counter to the beginning of *main()*. See [KBA231071](https://community.cypress.com/docs/DOC-21143) to learn about this and for the workaround.
 
@@ -279,12 +287,11 @@ With the design implemented in this CE, there will always be successful verifica
 ## References
 
 Relevant Application notes are:
-- [AN235305](https://www.infineon.com/dgdl/Infineon-AN235305_GETTING_STARTED_WITH_TRAVEO_TM_T2G_FAMILY_MCUS_IN_MODUSTOOLBOX_TM-ApplicationNotes-v05_00-EN.pdf?fileId=8ac78c8c8b6555fe018c1fddd8a72801) - Getting started with TRAVEO™ T2G family MCUs
-in ModusToolbox™
-- [AN220224](https://www.infineon.com/dgdl/Infineon-AN220224_-_How_to_use_Timer_Counter_and_PWM_TCPWM_in_TRAVEO_T2G_family-ApplicationNotes-v05_00-EN.pdf?fileId=8ac78c8c7cdc391c017d0d3a800a6752) - How to use Timer, Counter, and PWM (TCPWM) in TRAVEO™ T2G family
-- [AN235303](https://www.infineon.com/dgdl/Infineon-AN235303_-_CLOCK_CONFIGURATION_SETUP_FOR_TRAVEO_TM_T2G_FAMILY_MCUS_IN_MODUSTOOLBOX_TM-ApplicationNotes-v02_00-EN.pdf?fileId=8ac78c8c8b6555fe018c1fddd05127fc) - Clock configuration setup for TRAVEO™ T2G family MCUs in ModusToolbox™
-- [AN225401](https://www.infineon.com/dgdl/Infineon-AN225401_-_How_to_use_serial_communications_block_SCB_in_TRAVEO_T2G_family-ApplicationNotes-v06_00-EN.pdf?fileId=8ac78c8c7cdc391c017d0d3e657867d2) - How to use serial communications block (SCB) in TRAVEO™ T2G family
-- [AN220203](https://www.infineon.com/dgdl/Infineon-AN220203_-_Smart_I_O_usage_setup_in_TRAVEO_T2G_family-ApplicationNotes-v06_00-EN.pdf?fileId=8ac78c8c7cdc391c017d0d3afcf16792) - Smart I/O usage setup in TRAVEO™ T2G family
+- [AN235305](https://www.infineon.com/assets/row/public/documents/10/42/infineon-an235305-getting-started-with-traveo-t2g-family-mcus-in-modustoolbox-applicationnotes-en.pdf?fileId=8ac78c8c8b6555fe018c1fddd8a72801) - GETTING STARTED WITH TRAVEO™ T2G FAMILY MCUS IN MODUSTOOLBOX™
+- [AN220224](https://www.infineon.com/row/public/documents/10/42/infineon-an220224---how-to-use-timer-counter-and-pwm-tcpwm-in-traveo-t2g-family-applicationnotes-en.pdf) - How to use Timer, Counter, and PWM (TCPWM) in TRAVEO™ T2G family
+- [AN235303](https://www.infineon.com/gated/infineon-an235303---clock-configuration-setup-for-traveo-tm-t2g-family-mcus-in-modustoolbox-tm-applicationnotes-en_9c75aba2-fe5c-4225-920f-5be72d0fc8a1) - Clock configuration setup for TRAVEO™ T2G family MCUs in ModusToolbox™
+- [AN225401](https://www.infineon.com/assets/row/public/documents/10/42/infineon-an225401---how-to-use-serial-communication-block-scb-in-traveo-t2g-family-applicationnotes-en.pdf?fileId=8ac78c8c7cdc391c017d0d3e657867d2) - How to use serial communications block (SCB) in TRAVEO™ T2G family
+- [AN220203](https://www.infineon.com/gated/infineon-an220203---smart-i-o-usage-setup-in-traveo-t2g-family-applicationnotes-en_8af77a29-afb8-40fa-b2be-eda7f9dc0daf) - Smart I/O usage setup in TRAVEO™ T2G family
 
 ModusToolbox™ is available online:
 - <https://www.infineon.com/modustoolbox>
@@ -293,10 +300,10 @@ Associated TRAVEO™ T2G MCUs can be found on:
 - <https://www.infineon.com/cms/en/product/microcontroller/32-bit-traveo-t2g-arm-cortex-microcontroller/>
 
 More code examples can be found on the GIT repository:
-- [TRAVEO™ T2G Code examples](https://github.com/orgs/Infineon/repositories?q=mtb-t2g-&type=all&language=&sort=)
+- [TRAVEO™ T2G Code examples](https://github.com/orgs/Infineon/repositories?q=topic%3Akit-t2g-b-e-lite&type=all&language=&sort=) for [KIT_T2G-B-E_LITE](https://www.infineon.com/evaluation-board/KIT-T2G-B-E-LITE)
 
 For additional training, visit our webpage:
-- [TRAVEO™ T2G training](https://www.infineon.com/cms/en/product/microcontroller/32-bit-traveo-t2g-arm-cortex-microcontroller/32-bit-traveo-t2g-arm-cortex-for-body/traveo-t2g-cyt4bf-series/#!trainings)
+- [TRAVEO™ T2G trainings](https://www.infineon.com/training/microcontroller-trainings)
 
 For questions and support, use the TRAVEO™ T2G Forum:
 - <https://community.infineon.com/t5/TRAVEO-T2G/bd-p/TraveoII>
